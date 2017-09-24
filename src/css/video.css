@@ -1,0 +1,42 @@
+.video-react .video-react-big-play-button {
+    font-size: 3em;
+    text-align: center;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    position: absolute;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    line-height: 3rem;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    cursor: pointer;
+    opacity: 1;
+    border: 0.06666em solid #fff;
+    background-color: #2B333F;
+    background-color: rgba(43,51,63,0.7);
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.video_container {
+    width: 100vw;
+    height: auto;
+    background: #ffffff;
+}
+
+.video_info {
+	width: 100vw;
+	height: 4rem;
+	line-height: 4rem;
+	font-size: 1rem;
+	text-align: center;
+    border: 1px solid #eee;
+}

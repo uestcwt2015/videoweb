@@ -1,0 +1,42 @@
+.history_video_list {
+	width: calc(100vw - 1rem);
+	padding: 1.8rem 0.5rem 0rem 0.5rem;
+	height: auto;
+	background: #ffffff;
+	margin-top: 0.3rem;
+}
+
+.history_video_list_item {
+	height: 6rem;
+	list-style: none;
+	overflow: hidden;
+	margin-top: 0.2rem;
+	color: #6d757a;
+	font-size: 0.8rem;
+	position: relative;
+}
+
+.history_video_list_img {
+	width: 35%;
+	float: left;
+	height: auto;
+	margin-right: 0.5rem;
+}
+
+.history_video_list_watchNum {
+	position: absolute;
+	bottom: 0.5rem;
+}
+
+.history_video_list_watchNum:before {
+	content: '▶';
+	display: inline-block;
+	height: 1rem;
+	width: 1.4rem;
+	border: 1px solid #6d757a;
+	border-radius: 5px;
+	color: #6d757a;
+	text-align: center;
+	line-height: 1rem;
+	transform: scale(0.7)
+}
