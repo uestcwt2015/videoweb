@@ -40,3 +40,21 @@
 	text-align: center;
     border: 1px solid #eee;
 }
+
+.ant-carousel .slick-slide {
+    height: auto;
+}
+
+.ant-carousel {
+    width: 100vw;
+    height: auto;
+}
+
+.slick-list {
+    height: auto;
+}
+
+.carousel_image {
+    width: 100vw;
+    height: auto;
+}

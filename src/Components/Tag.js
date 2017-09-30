@@ -1,22 +1,33 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import {Tag, Icon} from 'antd';
 import '../css/tag.css';
+import {withRouter} from 'react-router';
 
-class Tag extends Component {
+class TagBox extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			name: ["美少女", "cosplay", "绝对领域", "宅舞", "ACG", "美少女", "cosplay", "绝对领域", "宅舞", "ACG"],
+			name: ["校庆", "电子科技大学", "网监办", "招生宣传", "校园"],
 			isShow: false
 		}
 
 		this.showTag = this.showTag.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 	}
 
 
 	componentDidMount() {
 		//fetch API
+	}
+
+	handleClick(e) {
+		this.props.router.push({
+			pathname: '/list/' + e.target.innerText,
+			state: {
+				tag: e.target.innerText
+			}
+		})
 	}
 
 	showTag() {
@@ -26,17 +37,20 @@ class Tag extends Component {
 			isShow: !this.state.isShow
 		})
 
-		let style = this.state.isShow ? '1.8rem' : 'auto';
+		let style = this.state.isShow ? '3rem' : 'auto';
 		container.style.height = style;
 	}
 
 	render() {
+		let colors = ["pink", "red", "orange", "green", "cyan", "blue", "purple"];
+
 		return (
 			<div className="tag_container" ref="container">
-				<span className="show_button" onClick={this.showTag}>{this.state.isShow ? "收起" : "展开更多"}</span>
+				<span className="tag_name">{this.props.name}</span> 
+				<Icon type={this.state.isShow ? "up" : "down"} className="show_button" onClick={this.showTag} />
 				{
 					this.state.name.map((e, i) => (
-						<Link key={i} className="tag_item">{e}</Link> 
+						<Tag key={i} color={colors[i%7]} onClick={this.handleClick}>{this.state.name[i]}</Tag>
 					))
 				}
 			</div>
@@ -44,4 +58,4 @@ class Tag extends Component {
 	}
 }
 
-export default Tag;
+export default withRouter(TagBox);

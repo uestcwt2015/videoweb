@@ -6,3 +6,17 @@
 body {
 	background: #f6f9fa;
 }
+
+.page_header {
+	height: 5vh;
+	width: 100vw;
+	text-align: center;
+}
+
+.page_footer {
+	width: 100vw;
+	height: 5%;
+	padding-top: 0.5rem;
+	background: #f6f9fa;
+	text-align: center;
+}
