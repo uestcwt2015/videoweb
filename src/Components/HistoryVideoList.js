@@ -12,13 +12,13 @@ class HistoryVideoList extends Component {
 					text: '成电校友捐建母校价值3亿元楼宇效果视频',
 					watchedNum: '233',
 					img: 'http://www.video.uestc.edu.cn/upload/processimgsmall/2017/9/e4da3b7fbbce2345d7772b0674a318d51506603553.jpg',
-					src: '//living.stuhome.com/szw/mine.m3u8',
+					src: 'http://living.stuhome.com/streamout/test00.m3u8',
 				},
 				{
 					text: '【视频】梦想自定义—电子科大2017招生宣传微电影',
 					watchedNum: '2333',
 					img: 'http://www.video.uestc.edu.cn/upload/processimgsmall/2017/6/1216cced15c00a63be58607787cf95381497511484.jpg',
-					src: '//living.stuhome.com/szw/mine.m3u8',
+					src: '//living.stuhome.com/streamout/test.m3u8',
 				},
 				{
 					text: '带一本书来成电—图书馆馆长李泰峰',
