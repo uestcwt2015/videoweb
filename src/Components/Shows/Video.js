@@ -43,6 +43,17 @@ class Video extends Component {
         return (
         	<div className="video_container">
 	        	{
+	        		this.state.notice.length && this.props.src === undefined ? 
+	        		<Carousel autoplay={this.state.notice.length > 1 ? true : false} autoplaySpeed={5000} className="carousel" >
+						{
+							this.state.notice.map((e, i) => {
+								return (
+									<img key={i} data-href={e.url} src={e.image} alt={e.alt} className="carousel_image" onClick={this.handleClick}/>
+								)
+	 						})
+						}
+				    </Carousel>
+					:
 					<Player playsInline={true} poster="./images/videobg.png">
 			            <LoadingSpinner />
 			            <HLSSource isVideoChild src={this.state.src}/>
